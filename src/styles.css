@@ -40,3 +40,9 @@ main #workspace {
     height: 83vh;
     background-color: aliceblue;
 }
+
+/* SIDEBAR */
+.task_div {
+    background-color: aqua;
+    margin-bottom: 30px;
+}
