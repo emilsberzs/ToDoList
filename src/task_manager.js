@@ -61,7 +61,20 @@ for (let i = 0; i < allTasks.length; i++) {
     due_date_p.innerHTML = 'Due Date: ' + allTasks[i].due_date;
     let priority_p = document.createElement('p');
     priority_p.innerHTML = 'Priority: ' + allTasks[i].priority;
-    new_div.append(title_p, description_p, due_date_p, priority_p)
+    let complete_p = document.createElement('p');
+    complete_p.innerHTML = allTasks[i].complete;
+    const toggle_button = document.createElement('button')
+    toggle_button.innerHTML = "Complete"
+    toggle_button.addEventListener('click',
+        function () {
+            console.log(allTasks[i].complete)
+            toggleComplete(allTasks[i].title)
+            console.log(allTasks[i].complete)
+            complete_p.innerHTML = allTasks[i].complete
+        }
+    )
+
+    new_div.append(title_p, description_p, due_date_p, priority_p, complete_p, toggle_button)
     sidebar.appendChild(new_div)
     //console.log(allTasks[i].title, allTasks[i].description, allTasks[i].due_date, allTasks[i].priority, allTasks[i].complete)
 }
