@@ -43,9 +43,11 @@ export function removeTask(title) {
 export function toggleComplete(title) {
     if (allTasks[findIndex(title)].complete == false) {
         allTasks[findIndex(title)].complete = true;
+
     }
     else if (allTasks[findIndex(title)].complete == true) {
         allTasks[findIndex(title)].complete = false;
+
     }
 }
 
@@ -53,6 +55,7 @@ export function toggleComplete(title) {
 for (let i = 0; i < allTasks.length; i++) {
     let new_div = document.createElement('div');
     new_div.setAttribute('class', 'task_div');
+    new_div.setAttribute('id', 'task' + i)
     let title_p = document.createElement('p')
     title_p.innerHTML = 'Title: ' + allTasks[i].title
     let description_p = document.createElement('p');

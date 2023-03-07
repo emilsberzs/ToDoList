@@ -46,3 +46,11 @@ main #workspace {
     background-color: aqua;
     margin-bottom: 30px;
 }
+
+.task_div .complete {
+    background-color: lightgreen;
+}
+
+.task_div .pending {
+    background-color: orange;
+}
